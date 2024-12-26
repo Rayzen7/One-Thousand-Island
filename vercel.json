@@ -1,6 +1,12 @@
 {
-  "version": 2,
-  "builds": [
-    { "src": "**", "dest": "." }
-  ]
-}
+    "version": 2,
+    "builds": [
+      { "src": "**", "dest": "." }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/index.html"
+      }
+    ]
+  }
