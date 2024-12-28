@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Testimonials
 window.onload = function () {
-  const testimonialsWrapper = document.getElementById("testimonialsWrapper");    
+  const testimonialsWrapper = document.getElementById("testimonialsWrapper");
   const pagination = document.getElementById("pagination");
   let currentIndex = 0;
 
@@ -120,7 +120,70 @@ window.onload = function () {
   updatePagination();
 };
 
-// Accordion
+// Information
+document.addEventListener("DOMContentLoaded", () => {
+  const wrapper = document.getElementById("informationWrapper");
+
+  destinationInfo.forEach((info, index) => {
+    const infoContainer = document.createElement("div");
+    infoContainer.classList.add("information-container");
+
+    infoContainer.innerHTML = `
+        <div class="information-container-header">
+          <div class="information-island-header">
+            <h1>${info.name}</h1>
+            <p>${info.description}</p>
+            <iframe src="${
+              info.mapSrc
+            }" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+          <div class="information-island-body">
+            <div class="information-island-flex">
+              <img src="./assets/img/information/wallet.svg" alt="" />
+              <div class="information-island-text">
+                <h2>Entrance Ticket Price</h2>
+                <p>${info.ticketPrice}</p>
+              </div>
+            </div>
+            <div class="information-island-flex">
+              <img src="./assets/img/information/lamp.svg" alt="" />
+              <div class="information-island-text">
+                <h2>Location and Wind direction</h2>
+                <p>${info.location}</p>
+              </div>
+            </div>
+            <div class="information-island-flex">
+              <img src="./assets/img/information/hearth.svg" alt="" />
+              <div class="information-island-text">
+                <h2>Contact Person & Social Media</h2>
+                <p>${info.contact}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="information-body-img">
+          ${info.images.map((img) => `<img src="${img}" alt="" />`).join("")}
+        </div>
+      `;
+
+    wrapper.appendChild(infoContainer);
+  });
+
+  const informationWrapper = document.getElementById("informationWrapper");
+  let currentIndex = 0;
+
+  function scrollWrapper() {
+    currentIndex++;
+    if (currentIndex >= wrapper.children.length) {
+      currentIndex = 0;
+    }
+    informationWrapper.style.transform = `translateX(-${currentIndex * 94.8}%)`;
+  }
+
+  setInterval(scrollWrapper, 5000);
+});
+
+// FAQ
 document.querySelectorAll(".faq-accordion-header").forEach((header) => {
   header.addEventListener("click", () => {
     const content = header.nextElementSibling;
