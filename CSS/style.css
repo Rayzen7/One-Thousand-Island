@@ -306,7 +306,7 @@ html {
     width: 476px;
     background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(2px);
-    margin-top: -245px;
+    margin-top: -275px;
     transform: translateY(100%);
     opacity: 0;
     color: white;
@@ -338,6 +338,17 @@ html {
     padding-top: 16px;
     font-size: 18px;
     font-family: var(--poppins-semibold);
+}
+
+.destinations-card-details .view-information,
+.destinations-card-details .view-information a {
+    font-family: var(--poppins-regular);
+    font-style: italic;
+    text-decoration: underline;
+    font-size: 14px;
+    width: auto;
+    padding: 16px 0;
+    color: white;
 }
 
 /* Hover */
@@ -392,9 +403,9 @@ html {
 }
 
 .circle-page {
-    width: 10px;
-    height: 10px;
-    border-radius: 100%;
+    width: 30px;
+    height: 8px;
+    border-radius: 12px;
     background-color: var(--primary-color);
 }
 /* Destinations End */
