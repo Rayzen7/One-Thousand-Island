@@ -395,7 +395,37 @@ body {
     transition: var(--transition-hover);
 }
 
-.arrow-pagination:hover {
+.arrow-left {
+    background-color: var(--text-desc);
+    border: var(--user-color);
+    cursor: not-allowed;
+    fill: #ccc;   
+}
+
+.arrow-left.active {
+    background-color: var(--primary-color);
+    fill: white;
+    cursor: pointer;
+    border: 3px solid var(--primary-color);
+}
+
+.arrow-right.active {
+    background-color: var(--text-desc);
+    border: var(--user-color);
+    cursor: not-allowed;
+    fill: #ccc;
+}
+
+.arrow-left:hover:not(.active),
+.arrow-right:hover.active {
+    background-color: var(--text-desc);
+    border: var(--user-color);
+    cursor: not-allowed;
+    fill: #ccc;
+}
+
+.arrow-right:hover,
+.arrow-left:hover {
     background-color: white;
     fill: var(--primary-color);
 }

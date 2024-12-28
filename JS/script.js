@@ -12,8 +12,8 @@ window.addEventListener("scroll", function () {
 document.addEventListener("DOMContentLoaded", function () {
   const container = document.querySelector(".destinations-container");
   const pagination = document.querySelectorAll(".circle-page");
-  const arrowLeft = document.querySelector(".arrow-pagination:first-child");
-  const arrowRight = document.querySelector(".arrow-pagination:last-child");
+  const arrowLeft = document.querySelector(".arrow-left");
+  const arrowRight = document.querySelector(".arrow-right");
 
   let currentIndex = 0;
 
@@ -30,10 +30,36 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  function generateDestinations() {
+    destinationsData.forEach((destination) => {
+      const card = document.createElement("div");
+      card.classList.add("destinations-card");
+
+      card.innerHTML = `
+          <img src="${destination.image}" alt="${destination.name}" />
+          <div class="destinations-card-text">
+            <h2>${destination.name}</h2>
+          </div>
+          <div class="destinations-card-details">
+            <h1>${destination.title}</h1>
+            <p>${destination.description}</p>
+            <h5>${destination.price}</h5>
+            <p class="view-information">
+              <a href="${destination.link}">View Information Detail</a>
+            </p>
+          </div>
+        `;
+
+      container.appendChild(card);
+    });
+  }
+
   arrowRight.addEventListener("click", () => {
     if (currentIndex < pagination.length - 1) {
       currentIndex++;
       updateSlide(currentIndex);
+      arrowRight.classList.add('active');
+      arrowLeft.classList.add('active');
     }
   });
 
@@ -41,6 +67,8 @@ document.addEventListener("DOMContentLoaded", function () {
     if (currentIndex > 0) {
       currentIndex--;
       updateSlide(currentIndex);
+      arrowRight.classList.remove('active');
+      arrowLeft.classList.remove('active');
     }
   });
 
@@ -51,6 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  generateDestinations();
   updateSlide(currentIndex);
 });
 
