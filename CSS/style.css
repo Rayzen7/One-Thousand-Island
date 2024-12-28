@@ -48,6 +48,10 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 @keyframes bounce {
     0% {
         transform: translateY(0);
@@ -552,12 +556,20 @@ html {
     height: 130vh;
 }
 
+.testimonials-wrapper {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    width: 100%;
+    gap: 120px;
+    padding: 0 110px;
+}
+
 .testimonials-flex {
     display: flex;
-    justify-content: center;
-    align-items: start;  
+    justify-content: flex-start;
+    align-items: center;  
     gap: 170px; 
-    margin-top: 40px; 
+    transition: transform 1s ease-in-out;
 }
 
 .testimonials-text {
@@ -661,7 +673,7 @@ html {
     align-items: center;
     gap: 8px;
     margin-left: 110px;
-    margin-top: -30px;
+    margin-top: 30px;
 }
 
 .testimonials-circle {
