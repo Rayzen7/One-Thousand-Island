@@ -246,16 +246,17 @@ html {
 }
 
 .destinations-flex {
-    padding: 0px 70px;
-    margin: 0 20px;
+    padding: 0px 20px;
+    overflow: hidden;
 }
 
 .destinations-container {
     margin-top: 50px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 40px;
+    transition: transform 0.5s ease-in-out;
 }
 
 .destinations-flex::-webkit-scrollbar {
@@ -406,6 +407,10 @@ html {
     width: 30px;
     height: 8px;
     border-radius: 12px;
+    background-color: var(--text-desc);
+}
+
+.circle-page.active {
     background-color: var(--primary-color);
 }
 /* Destinations End */
