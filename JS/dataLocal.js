@@ -1,83 +1,76 @@
 const destinationsData = [
   {
+    id: 1,
     name: "Macan Island",
     image: "./assets/img/destinations/card1.png",
     title: "Eco Resort - Tiger Island",
     description: "The environmentally friendly concept, snorkeling, kayaking and relaxed atmosphere make Eco Resort Pulau Macan the best choice for a romantic honeymoon.",
-    price: "IDR 1.000.000 - IDR 1.500.000",
-    link: "#"
+    price: "IDR 1.000.000 - IDR 1.500.000"
   },
   {
+    id: 2,
     name: "Tidung Island",
     image: "./assets/img/destinations/card2.jpg",
     title: "Love Bridge - Tidung Island",
     description: "The iconic Love Bridge, located on Tidung Island, is a must-visit destination for travelers. Connecting Big Tidung Island and Small Tidung Island.",
-    price: "IDR 5.000 - IDR 10.000",
-    link: "#"
+    price: "IDR 5.000 - IDR 10.000"
   },
   {
+    id: 3,
     name: "Pramuka Island",
     image: "./assets/img/destinations/card3.jpg",
     title: "Mangrove - Pramuka Island",
     description: "Pramuka Island is famous for its turtle conservation, snorkeling, diving, mangrove trekking, and stunning sunset views from the pier. Nearby Semak Daun Island is ideal for camping.",
-    price: "IDR 50.000 - IDR 150.000",
-    link: "#"
+    price: "IDR 50.000 - IDR 150.000"
   },
   {
     name: "Semak Daun Island",
     image: "./assets/img/destinations/card4.jpg",
     title: "Snorkeling - Semak Daun Island",
     description: "Semak Daun Island, an uninhabited gem in the Thousand Islands, is ideal for camping. It boasts white sandy beaches, clear waters, and a tranquil vibe, perfect for snorkeling.",
-    price: "IDR 20.000 - IDR 50.000",
-    link: "#"
+    price: "IDR 20.000 - IDR 50.000"
   },
   {
     name: "Ayer Island",
     image: "./assets/img/destinations/card5.jpg",
     title: "Floating Cottages - Ayer Island",
     description: "Ayer Island, part of the Thousand Islands, is known as the 'Pearl of the Islands.' It features exclusive resorts with floating cottages, modern facilities, and a relaxing tropical atmosphere.",
-    price: "IDR 300.000 - IDR 500.000",
-    link: "#"
+    price: "IDR 300.000 - IDR 500.000"
   },
   {
     name: "Coconut Island",
     image: "./assets/img/destinations/card6.png",
     title: "Private Getaway - Coconut Island",
     description: "Known for its peaceful atmosphere, Kelapa Island offers a quiet retreat for those seeking a more tranquil vacation. The island has clear beaches and serene waters.",
-    price: "IDR 20.000 - IDR 50.000",
-    link: "#"
+    price: "IDR 20.000 - IDR 50.000"
   },
   {
     name: "Kotok Island",
     image: "./assets/img/destinations/card7.png",
     title: "Beachfront Villas - Kotok Island",
     description: "Kotok Island is ideal for those looking to escape the crowds, offering a peaceful and undisturbed environment. Stay in eco-friendly beachfront villas.",
-    price: "IDR 1.000.000 - IDR 2.500.000",
-    link: "#"
+    price: "IDR 1.000.000 - IDR 2.500.000"
   },
   {
     name: "Harapan Island",
     image: "./assets/img/destinations/card8.png",
     title: "Nature Exploration - Harapan Island",
     description: "Harapan Island is known for its lush green landscapes and is perfect for trekking and exploring the natural beauty of the island.",
-    price: "IDR 50.000 - IDR 100.000",
-    link: "#"
+    price: "IDR 50.000 - IDR 100.000"
   },
   {
     name: "Bira Island",
     image: "./assets/img/destinations/card9.png",
     title: "Clear Waters - Bira Island",
     description: "Known for its untouched natural beauty, Pulau Bira is great for camping and nature walks. The island’s clear waters are perfect for snorkeling and swimming.",
-    price: "IDR 20.000 - IDR 40.000",
-    link: "#"
+    price: "IDR 20.000 - IDR 40.000"
   },
   {
     name: "Hair Island",
     image: "./assets/img/destinations/card10.png",
     title: "Mangrove Forests - Hair Island",
     description: "Explore the lush mangrove forests, which provide a unique ecosystem for a variety of species. Rambut Island is a wildlife sanctuary, known for its bird watching opportunities.",
-    price: "IDR 25.000 - IDR 50.000",
-    link: "#"
+    price: "IDR 25.000 - IDR 50.000"
   }
 ];
 
@@ -146,7 +139,7 @@ const destinationInfo = [
   },
   {
     id: 2,
-    name: "Tiger Island",
+    name: "Tiger Island aselole",
     description:
       "The environmentally friendly concept, snorkeling, kayaking and relaxed atmosphere make Eco Resort Pulau Macan the best choice for a romantic honeymoon",
     location:

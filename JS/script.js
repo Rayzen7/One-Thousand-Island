@@ -1,4 +1,4 @@
-// Navbar
+// Navbar Start
 window.addEventListener("scroll", function () {
   const navbar = document.querySelector(".navbar");
   if (window.scrollY > 0) {
@@ -7,8 +7,9 @@ window.addEventListener("scroll", function () {
     navbar.classList.remove("navbar-scrolled");
   }
 });
+// Navbar End
 
-// Destination
+// Destination Start
 document.addEventListener("DOMContentLoaded", function () {
   const container = document.querySelector(".destinations-container");
   const pagination = document.querySelectorAll(".circle-page");
@@ -45,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <p>${destination.description}</p>
             <h5>${destination.price}</h5>
             <p class="view-information">
-              <a href="${destination.link}">View Information Detail</a>
+              <a href="#information" class="destination-link" data-id="${destination.id}">View Information Detail</a>
             </p>
           </div>
         `;
@@ -58,8 +59,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (currentIndex < pagination.length - 1) {
       currentIndex++;
       updateSlide(currentIndex);
-      arrowRight.classList.add('active');
-      arrowLeft.classList.add('active');
     }
   });
 
@@ -67,8 +66,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (currentIndex > 0) {
       currentIndex--;
       updateSlide(currentIndex);
-      arrowRight.classList.remove('active');
-      arrowLeft.classList.remove('active');
     }
   });
 
@@ -82,8 +79,9 @@ document.addEventListener("DOMContentLoaded", function () {
   generateDestinations();
   updateSlide(currentIndex);
 });
+// Destination End
 
-// Testimonials
+// Testimonials Start
 window.onload = function () {
   const testimonialsWrapper = document.getElementById("testimonialsWrapper");
   const pagination = document.getElementById("pagination");
@@ -148,6 +146,7 @@ window.onload = function () {
 
   updatePagination();
 };
+// Testimonials End
 
 // Information
 document.addEventListener("DOMContentLoaded", () => {
@@ -206,11 +205,36 @@ document.addEventListener("DOMContentLoaded", () => {
     if (currentIndex >= wrapper.children.length) {
       currentIndex = 0;
     }
+
     informationWrapper.style.transform = `translateX(-${currentIndex * 94.8}%)`;
   }
 
-  setInterval(scrollWrapper, 5000);
+  setInterval(scrollWrapper, 7000);
+
+  const destinationLinks = document.querySelectorAll(".destination-link");
+  destinationLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const destinationId = event.target.getAttribute("data-id");
+      currentIndex = destinationId - 1;
+      wrapper.style.transform = `translateX(-${currentIndex * 94.8}%)`;
+      event.preventDefault();
+
+      document.querySelector("#information").scrollIntoView({
+        behavior: "smooth",
+      });
+
+      wrapper.style.transform = `translateX(-${currentIndex * 94.8}%)`;
+    });
+  });
+
+  if (window.location.hash) {
+    const destinationId = window.location.hash.split("-")[1];
+    currentIndex = destinationId - 1;
+    wrapper.style.transform = `translateX(-${currentIndex * 94.8}%)`;
+  }
+
 });
+// Information End
 
 // FAQ
 document.querySelectorAll(".faq-accordion-header").forEach((header) => {
@@ -231,3 +255,4 @@ document.querySelectorAll(".faq-accordion-header").forEach((header) => {
     icon.classList.toggle("rotate");
   });
 });
+// FAQ End
