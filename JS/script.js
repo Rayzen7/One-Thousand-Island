@@ -54,6 +54,8 @@ document.addEventListener("DOMContentLoaded", function () {
     updateSlide(currentIndex);
 });
 
+// Testimonials
+  
 
 // Accordion
 document.querySelectorAll('.faq-accordion-header').forEach(header => {

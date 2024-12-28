@@ -1,0 +1,36 @@
+[
+    {
+      "name": "Clarissa Monic",
+      "location": "Visitor from Papua",
+      "date": "Sunday, 9th of February, 2024",
+      "title": "Perfect for a Quick Getaway",
+      "text": "I visited Tidung Island for a weekend trip, and it was exactly what I needed to escape the hustle and bustle of city life. The island is charming and offers a peaceful atmosphere, perfect for relaxing and unwinding. The highlight of my visit was the iconic Love Bridge, where I enjoyed breathtaking sunset views and took some amazing photos.",
+      "image": "./assets/img/testimonials/profile.svg",
+      "starImage": "./assets/img/testimonials/stars.svg",
+      "primaryImage": "./assets/img/testimonials/img-primary.svg",
+      "cardImages": ["./assets/img/testimonials/card2.svg", "./assets/img/testimonials/card3.svg"]
+    },
+    {
+      "name": "John Doe",
+      "location": "Visitor from Bali",
+      "date": "Monday, 10th of February, 2024",
+      "title": "A Wonderful Experience",
+      "text": "I had an unforgettable time on Tidung Island. The peaceful environment, along with the warm hospitality of the locals, made it a perfect getaway. I particularly enjoyed the sunset views from the Love Bridge, a truly beautiful experience.",
+      "image": "./assets/img/testimonials/profile2.svg",
+      "starImage": "./assets/img/testimonials/stars2.svg",
+      "primaryImage": "./assets/img/testimonials/img-primary2.svg",
+      "cardImages": ["./assets/img/testimonials/card4.svg", "./assets/img/testimonials/card5.svg"]
+    },
+    {
+      "name": "Maria Smith",
+      "location": "Visitor from Jakarta",
+      "date": "Wednesday, 12th of February, 2024",
+      "title": "A Peaceful Escape",
+      "text": "The serenity of Tidung Island is unmatched. I found it to be the perfect place to relax and recharge. The beaches are pristine, and the atmosphere is calm. I can't wait to come back again.",
+      "image": "./assets/img/testimonials/profile3.svg",
+      "starImage": "./assets/img/testimonials/stars3.svg",
+      "primaryImage": "./assets/img/testimonials/img-primary3.svg",
+      "cardImages": ["./assets/img/testimonials/card6.svg", "./assets/img/testimonials/card7.svg"]
+    }
+  ]
+  
