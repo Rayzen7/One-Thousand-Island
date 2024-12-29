@@ -59,6 +59,8 @@ document.addEventListener("DOMContentLoaded", function () {
     if (currentIndex < pagination.length - 1) {
       currentIndex++;
       updateSlide(currentIndex);
+      arrowRight.classList.add("active");
+      arrowLeft.classList.add("active");
     }
   });
 
@@ -66,6 +68,8 @@ document.addEventListener("DOMContentLoaded", function () {
     if (currentIndex > 0) {
       currentIndex--;
       updateSlide(currentIndex);
+      arrowRight.classList.remove("active");
+      arrowLeft.classList.remove("active");
     }
   });
 
@@ -199,31 +203,45 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const informationWrapper = document.getElementById("informationWrapper");
   let currentIndex = 0;
+  let autoScrollTimer;
+  let isUserInteracting = false;
 
   function scrollWrapper() {
+    if (isUserInteracting) return;
     currentIndex++;
     if (currentIndex >= wrapper.children.length) {
       currentIndex = 0;
     }
-
     informationWrapper.style.transform = `translateX(-${currentIndex * 94.8}%)`;
   }
 
-  setInterval(scrollWrapper, 7000);
+  function startAutoScroll() {
+    autoScrollTimer = setInterval(scrollWrapper, 5000);
+  }
+
+  function stopAutoScroll() {
+    clearInterval(autoScrollTimer);
+  }
 
   const destinationLinks = document.querySelectorAll(".destination-link");
   destinationLinks.forEach((link) => {
     link.addEventListener("click", (event) => {
+      event.preventDefault();
       const destinationId = event.target.getAttribute("data-id");
       currentIndex = destinationId - 1;
       wrapper.style.transform = `translateX(-${currentIndex * 94.8}%)`;
-      event.preventDefault();
 
-      document.querySelector("#information").scrollIntoView({
+      const pageLink = document.querySelector("#information");
+      pageLink.scrollIntoView({
         behavior: "smooth",
       });
 
-      wrapper.style.transform = `translateX(-${currentIndex * 94.8}%)`;
+      isUserInteracting = true;
+      stopAutoScroll();
+      setTimeout(() => {
+        isUserInteracting = false;
+        startAutoScroll();
+      }, 8000);
     });
   });
 
@@ -233,6 +251,7 @@ document.addEventListener("DOMContentLoaded", () => {
     wrapper.style.transform = `translateX(-${currentIndex * 94.8}%)`;
   }
 
+  startAutoScroll();
 });
 // Information End
 
