@@ -766,7 +766,7 @@ body {
 }
 
 .information-header {
-    margin-left: 100px;
+    margin-left: 85px;
 }
 
 .information-header h1 {
@@ -790,20 +790,23 @@ body {
     justify-content: flex-start;
     align-items: start;
     transition: all ease-in-out 1s;
-    padding: 0 95px;
-    gap: 120px;
 }
 
 .information-container {
     margin-top: 20px;
+    display: flex;
+    flex: 0 0 auto;
+    width: 100%;
+    padding: 0 45px;
+    flex-direction: column;
 }
 
 .information-container-header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin-top: 50px;
-    gap: 100px;
+    flex: 0 0 auto;
 }
 
 .information-island-header {
@@ -874,10 +877,10 @@ body {
 
 .information-body-img {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 55px;
     margin-top: 80px;
+    flex: 0 0 auto;
 }
 
 .information-body-img img {

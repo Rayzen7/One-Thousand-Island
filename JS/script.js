@@ -161,6 +161,7 @@ document.addEventListener("DOMContentLoaded", () => {
     infoContainer.classList.add("information-container");
 
     infoContainer.innerHTML = `
+      <div class="information-container">
         <div class="information-container-header">
           <div class="information-island-header">
             <h1>${info.name}</h1>
@@ -196,6 +197,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="information-body-img">
           ${info.images.map((img) => `<img src="${img}" alt="" />`).join("")}
         </div>
+      </div>
       `;
 
     wrapper.appendChild(infoContainer);
@@ -212,7 +214,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (currentIndex >= wrapper.children.length) {
       currentIndex = 0;
     }
-    informationWrapper.style.transform = `translateX(-${currentIndex * 94.8}%)`;
+    informationWrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
   }
 
   function startAutoScroll() {
@@ -229,7 +231,7 @@ document.addEventListener("DOMContentLoaded", () => {
       event.preventDefault();
       const destinationId = event.target.getAttribute("data-id");
       currentIndex = destinationId - 1;
-      wrapper.style.transform = `translateX(-${currentIndex * 94.8}%)`;
+      wrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
 
       const pageLink = document.querySelector("#information");
       pageLink.scrollIntoView({
@@ -248,7 +250,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (window.location.hash) {
     const destinationId = window.location.hash.split("-")[1];
     currentIndex = destinationId - 1;
-    wrapper.style.transform = `translateX(-${currentIndex * 94.8}%)`;
+    wrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
   }
 
   startAutoScroll();
