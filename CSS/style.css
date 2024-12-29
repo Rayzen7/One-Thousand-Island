@@ -603,7 +603,7 @@ body {
     justify-content: flex-start;
     align-items: center;  
     gap: 170px; 
-    margin: 0 105px;
+    margin: 0 6.5rem;
     transition: transform 1s ease-in-out;
 }
 
