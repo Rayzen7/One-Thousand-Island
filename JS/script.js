@@ -241,7 +241,7 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(() => {
         isUserInteracting = false;
         startAutoScroll();
-      }, 8000);
+      }, 9000);
     });
   });
 
