@@ -586,12 +586,16 @@ body {
     height: 130vh;
 }
 
+.testimonials-container-wrapper {
+    min-width: 100%;
+    overflow: hidden;
+}
+
 .testimonials-wrapper {
     display: flex;
     transition: transform 1s ease-in-out;
     width: 100%;
-    gap: 120px;
-    padding: 0 110px;
+    justify-content: flex-start;
 }
 
 .testimonials-flex {
@@ -599,6 +603,7 @@ body {
     justify-content: flex-start;
     align-items: center;  
     gap: 170px; 
+    margin: 0 105px;
     transition: transform 1s ease-in-out;
 }
 

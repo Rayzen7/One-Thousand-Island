@@ -138,7 +138,7 @@ window.onload = function () {
 
   function scrollTestimonials() {
     testimonialsWrapper.style.transform = `translateX(-${
-      currentIndex * 93.5
+      currentIndex * 100
     }%)`;
     updatePagination();
   }
