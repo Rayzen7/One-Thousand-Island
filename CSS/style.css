@@ -600,10 +600,11 @@ body {
 
 .testimonials-flex {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;  
-    gap: 170px; 
-    margin: 0 5rem;
+    padding: 0 100px;
+    flex: 0 0 auto;
+    justify-content: space-between;
+    align-items: center;   
+    width: 100%;
     transition: transform 1s ease-in-out;
 }
 
