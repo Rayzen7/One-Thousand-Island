@@ -1,11 +1,21 @@
 // Navbar Start
 window.addEventListener("scroll", function () {
   const navbar = document.querySelector(".navbar");
-  if (window.scrollY > 0) {
+  const navbarActive = document.querySelector('ul.navbar-list.active');
+  if (navbarActive || window.scrollY > 0) {
     navbar.classList.add("navbar-scrolled");
   } else {
     navbar.classList.remove("navbar-scrolled");
   }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const list = document.querySelector('.navbar-list');
+  const hamburger = document.querySelector('.navbar-hamburger');
+
+  hamburger.addEventListener('click', function () {
+    list.classList.toggle('active');
+  });
 });
 // Navbar End
 
@@ -19,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let currentIndex = 0;
 
   function updateSlide(index) {
-    const offset = -index * 1000;
+    const offset = -index * 1100;
     container.style.transform = `translateX(${offset}px)`;
 
     pagination.forEach((page, i) => {

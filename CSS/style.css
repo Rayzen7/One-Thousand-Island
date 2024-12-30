@@ -132,6 +132,10 @@ body::-webkit-scrollbar-thumb:hover {
     background-color: var(--tertiary-color); 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
+
+.navbar-hamburger {
+    display: none;
+}
 /* Navbar End */
 
 /* Home Start */
@@ -150,7 +154,7 @@ body::-webkit-scrollbar-thumb:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 60px;
+    gap: 110px;
     padding-top: 20px;
 }
 
@@ -370,7 +374,7 @@ body::-webkit-scrollbar-thumb:hover {
     color: white;
 }
 
-/* Hover */
+/* Hover Start */
 .destinations-card:hover {
     width: 350px;
     height: 450px;
@@ -597,7 +601,8 @@ body::-webkit-scrollbar-thumb:hover {
     background-size: cover;
     object-fit: cover;
     width: 100%;
-    height: 130vh;
+    height: auto;
+    padding-bottom: 130px;
 }
 
 .testimonials-container-wrapper {
@@ -1127,4 +1132,202 @@ body::-webkit-scrollbar-thumb:hover {
     font-family: var(--poppins-thin);
     color: white;
     cursor: pointer;
+}
+/* Footer End */
+
+/* Responsive Handphone */
+@media (min-width: 320px) and (max-width: 767px) {
+    /* Navbar Start */
+    .navbar {
+        height: 10vh;
+        padding: 0 35px;
+    }
+
+    .navbar img {
+        width: 170px;
+        position: relative;
+        z-index: 99;
+    }
+
+    .navbar-list {
+        position: absolute;
+        top: 0;
+        right: -100%;
+        background-color: var(--tertiary-color);
+        flex-direction: column;
+        height: 100vh;
+        width: 200px;
+        gap: 30px;
+        align-items: start;
+        padding: 0 60px;
+        transition: all ease-in-out 0.6s;
+    }
+
+    .navbar-list.active {
+        right: 0;
+    }
+
+    .navbar-list li a {
+        font-size: 14px;
+    }
+
+    .navbar-hamburger {
+        display: block;
+        position: relative;
+        z-index: 99;
+        width: 25px;
+        fill: white;
+        height: auto;
+    }
+    /* Navbar End */
+
+    /* Home Start */
+    .home {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .home-container {
+        flex-direction: column;
+        gap: 0;
+        padding: 0 25px;
+        padding-top: 0;
+        margin-top: -100px;
+    }
+
+    .home-text h1 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .home-text p {
+        width: auto;
+        font-size: 14px;
+        font-family: var(--poppins-regular);
+        padding-top: 30px;
+    }
+
+    .compas-container p {
+        padding: 0;
+    }
+
+    .home-button {
+        margin-top: 100px;
+    }
+
+    .home-button button {
+        font-size: 14px;
+    }
+
+    .home-button img {
+        display: none;
+    }
+
+    .home-image {
+        display: none;
+    }
+    /* Home End */
+
+    /* Destinations Start */
+    .destinations h1 {
+        font-size: 24px;
+    }
+
+    .destinations-flex {
+        overflow-x: scroll;
+        margin: 0 10px;
+        scroll-snap-align: unset;
+    }
+
+    .destinations-card-details h1 {
+        font-size: 16px;
+    }
+
+    .destinations-card-details p {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .destinations-card-details h5 {
+        font-size: 16px;
+    }
+    
+    .destinations-card:hover {
+        width: 300px;
+    }
+
+    .destinations-pagination {
+        display: none;
+    }
+    /* Destinations End */
+
+    /* Article Start */
+    .article {
+        padding-bottom: 70px;
+    }
+
+    .article h1 {
+        font-size: 24px;
+        padding-bottom: 40px;
+    }
+
+    .article-flex {
+        flex-direction: column;
+        gap: 70px;
+    }
+
+    .article-primary {
+        width: 100%;
+        padding: 0 25px;
+    }
+
+    .article-primary img {
+        width: 320px;
+    }
+
+    .article-primary h4 {
+        font-size: 12px;
+        font-family: var(--poppins-regular);
+    }
+
+    .article-primary h1 {
+        width: auto;
+        font-size: 16px;
+        padding-bottom: 10px;
+        text-align: justify;
+    }
+
+    .article-primary p {
+        width: auto;
+        text-align: justify;
+    }
+
+    .article-secondary {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .article-container img {
+        width: 120px;
+    }
+
+    .article-container-text h4,
+    .article-container-text h4 span {
+        font-size: 8px;
+        font-family: var(--poppins-regular);
+    }
+
+    .article-container-text h1 {
+        width: auto;
+        font-size: 14px;
+        padding-bottom: 0px;
+    }
+
+    .article-container p {
+        width: auto;
+        font-size: 10px;
+        text-align: justify;
+    }
 }
