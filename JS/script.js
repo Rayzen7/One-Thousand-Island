@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let currentIndex = 0;
 
   function updateSlide(index) {
-    const offset = -index * 1200;
+    const offset = -index * 1000;
     container.style.transform = `translateX(${offset}px)`;
 
     pagination.forEach((page, i) => {
@@ -152,7 +152,7 @@ window.onload = function () {
 };
 // Testimonials End
 
-// Information
+// Information Start
 document.addEventListener("DOMContentLoaded", () => {
   const wrapper = document.getElementById("informationWrapper");
 
@@ -257,7 +257,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 // Information End
 
-// FAQ
+// FAQ Start
 document.querySelectorAll(".faq-accordion-header").forEach((header) => {
   header.addEventListener("click", () => {
     const content = header.nextElementSibling;

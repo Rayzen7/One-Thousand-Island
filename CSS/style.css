@@ -52,6 +52,20 @@ body {
     overflow-x: hidden;
 }
 
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 12px;
+    transition: var(--transition-hover);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: var(--tertiary-color);
+}
+
 @keyframes bounce {
     0% {
         transform: translateY(0);
@@ -259,7 +273,7 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 40px;
+    gap: 30px;
     transition: transform 0.5s ease-in-out;
 }
 
@@ -766,7 +780,7 @@ body {
 }
 
 .information-header {
-    margin-left: 85px;
+    margin-left: 100px;
 }
 
 .information-header h1 {
@@ -807,6 +821,7 @@ body {
     align-items: center;
     margin-top: 50px;
     flex: 0 0 auto;
+    padding: 0 15px;
 }
 
 .information-island-header {
@@ -947,6 +962,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: var(--transition-hover);
 }
 
 .faq-accordion-header h1 {
@@ -966,6 +982,7 @@ body {
 
 .faq-accordion-header:hover {
     background: #e0e0e0;
+    border-radius: 12px 12px 0 0;
 }
 
 .faq-accordion-body {
@@ -979,6 +996,8 @@ body {
 
 .faq-accordion-body p {
     font-size: 14px;
+    width: 850px;
+    text-align: justify;
 }
 
 .faq-accordion-body.open {
