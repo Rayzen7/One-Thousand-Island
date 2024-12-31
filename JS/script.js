@@ -1,3 +1,36 @@
+// Splash Screen Start
+document.addEventListener("DOMContentLoaded", () => {
+  const splashScreen = document.querySelector(".splash-screen");
+  const splashImg = document.querySelector(".splash-img");
+  const leftBlue = document.querySelector(".background.left .layer.blue");
+  const leftWhite = document.querySelector(".background.left .layer.white");
+  const rightBlue = document.querySelector(".background.right .layer.blue");
+  const rightWhite = document.querySelector(".background.right .layer.white");
+
+  setTimeout(() => {
+    splashImg.classList.add("fade-in");
+  }, 200);
+
+  setTimeout(() => {
+    splashImg.classList.add("fade-out");
+
+    setTimeout(() => {
+      leftBlue.classList.add("move-left");
+      rightBlue.classList.add("move-right");
+
+      setTimeout(() => {
+        leftWhite.classList.add("move-left");
+        rightWhite.classList.add("move-right");
+
+        setTimeout(() => {
+          splashScreen.classList.add("hidden");
+        }, 2600);
+      }, 100); 
+    }, 1000); 
+  }, 2500); 
+});
+// Splash Screen End
+
 // Navbar Start
 window.addEventListener("scroll", function () {
   const navbar = document.querySelector(".navbar");
