@@ -1437,6 +1437,10 @@ body::-webkit-scrollbar-thumb:hover {
     .information-header p {
         display: none;
     }
+
+    .information-body-container-wrapper {
+        overflow: hidden;
+    }
     
     .information-container {
         padding: 0 15px;
