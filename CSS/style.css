@@ -993,7 +993,6 @@ body::-webkit-scrollbar-thumb:hover {
 .faq-accordion-body {
     opacity: 0;
     background: #fff;
-    font-size: 12px;
     font-family: var(--poppins-medium);
     transition: var(--transition-hover);
     max-height: 0px;
@@ -1421,6 +1420,10 @@ body::-webkit-scrollbar-thumb:hover {
     /* Testimonials End */
 
     /* Information Start */
+    .information {
+        padding-bottom: 50px;
+    }
+
     .information-header {
         margin-left: 0;
         text-align: center;
@@ -1497,5 +1500,125 @@ body::-webkit-scrollbar-thumb:hover {
     }
     /* Information End */
 
+    /* FAQ Start */
+    .faq-head {
+        justify-content: center;
+    }
+
+    .faq-head img {
+        display: none;
+    }
+
+    .faq-head-text {
+        padding: 0 35px;
+    }
+
+    .faq-head-text h1 {
+        font-size: 24px;
+    }
+
+    .faq-head-text p {
+        display: none;
+    }
+
+    .faq-container {
+        margin-top: 50px;
+        gap: 40px;
+    }
+
+    .faq-accordion-item {
+        width: 320px;
+        display: block;
+        margin:  0 auto;
+    }
+
+    .faq-accordion-header h1 {
+        font-size: 14px;
+        width: 220px;
+    }
+
+    .faq-arrow {
+        width: 30px;
+        height: 30px;
+    }
+
+    .faq-accordion-body p {
+        font-size: 12px;
+        width: 100%;
+    }
+    /* FAQ End */
+
+    /* Footer Start */
+    .footer {
+        padding-bottom: 40px;
+    }
     
+    .footer-header {
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+        padding: 0 25px;
+    }
+
+    .footer-header h1 {
+        font-size: 24px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-header-email {
+        padding: 15px 25px;
+    }
+
+    .footer-header-email img {
+        width: 25px;
+    }
+
+    .footer-header-email input {
+        margin-right: 0;
+        width: 160px;
+    }
+
+    .footer-line {
+        display: none;
+    }
+
+    .footer-body {
+        justify-content: center;
+        gap: 0;
+        padding-top: 90px;
+    }
+
+    .footer-body-header {
+        padding: 0 25px;
+    }
+
+    .footer-body-header img {
+        width: 130px;
+    }
+
+    .footer-body-icon img {
+        width: 90px;
+    }
+
+    .footer-body-header p {
+        width: 250px;
+        font-size: 14px;
+        text-align: justify;
+    }
+
+    .footer-body-flex {
+        display: none;
+    }
+
+    .footer-end {
+        justify-content: center;
+        margin-right: 0;
+        gap: 30px;
+        margin-top: 100px;
+    }
+
+    .footer-end p {
+        font-size: 12px;
+    }
 }
