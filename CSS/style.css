@@ -84,7 +84,7 @@ body::-webkit-scrollbar-thumb:hover {
   }
 }
 
-/* Splash Screen */
+/* Splash Screen Start */
 .splash-screen {
   position: fixed;
   top: 0;
@@ -162,7 +162,7 @@ body::-webkit-scrollbar-thumb:hover {
 .hidden {
   display: none;
 }
-/* Splash End */
+/* Splash Screen End */
 
 /* Navbar Start */
 .navbar {
@@ -226,8 +226,11 @@ body::-webkit-scrollbar-thumb:hover {
   background-size: cover;
   object-fit: cover;
   width: 100%;
-  height: 100vh;
-  padding-top: 100px;
+  height: 115vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .home-container {
@@ -1711,5 +1714,6 @@ body::-webkit-scrollbar-thumb:hover {
   .footer-end p {
     font-size: 12px;
   }
+  /* Footer End */
 }
-/* Footer End */
+/* Responsive Handphone End */
