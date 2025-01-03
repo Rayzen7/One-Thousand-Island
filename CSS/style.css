@@ -1297,6 +1297,10 @@ body::-webkit-scrollbar-thumb:hover {
     padding-top: 30px;
   }
 
+  .compas-container {
+    justify-content: center;
+  }
+
   .compas-container p {
     padding: 0;
   }
