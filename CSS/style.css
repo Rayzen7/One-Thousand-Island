@@ -1104,7 +1104,7 @@ body::-webkit-scrollbar-thumb:hover {
 .footer-header {
   display: flex;
   justify-content: space-around;
-  gap: 160px;
+  gap: 120px;
   align-items: center;
 }
 
